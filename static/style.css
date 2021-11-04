@@ -1,0 +1,70 @@
+.Heading{
+    display: inline-block;
+    width: 30%;
+    margin-left: 45%;
+}
+.Label{
+    font-weight: bold;
+    font-size: 19px;
+    display: block;
+    padding-left: 40%;
+}
+.btn{
+    margin-left: 40%;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    border-color: rgb(24, 23, 23);
+    padding: 9px 15px;
+    cursor: pointer;
+
+}
+.inp{
+    display: block;
+    padding: 12px 70px;
+    margin-bottom: 28px;
+    border-radius: 7px;
+    margin-left: 40%;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(19, 18, 18);
+    color: white;
+}
+
+.btn-button{
+    border: 2px solid;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    border-color: rgb(24, 23, 23);
+    padding: 9px 15px;
+    cursor: pointer;    
+}
+.btn-button:hover{
+    cursor: pointer;
+    background-color: rgb(19, 18, 18);
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 800px) {
+    .inp{
+        display: block;
+        padding: 12px 70px;
+        margin-bottom: 28px;
+        border-radius: 7px;
+        margin-left: 1%;
+    }
+    .Label{
+        font-weight: bold;
+        font-size: 19px;
+        display: block;
+        padding-left: 1%;
+    }
+    .btn{
+        margin-left: 1%;
+    }
+    
+}

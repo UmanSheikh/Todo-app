@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="/static/style.css">
+<body>
+    <div class='Heading'>
+        <h1 style="font-family: 'Ephesis'; font-size: 40px;">SW Todo</h1>
+    </div>
+    <form action="/" method="POST">
+    <label for="title" class="Label">Title</label>
+    <input type="text" name="title" class="inp">
+    <label for="desc" class="Label">Description</label>
+    <input type="text" name="desc" id="" class="inp">
+    <button type="submit" class="btn">Add Todo</button>
+    </form>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">SNo.</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Time</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for todo in alltodo %}
+          <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{todo.title}}</td>
+            <td>{{todo.desc}}</td>
+            <td>{{todo.date}}</td>
+            <td><a href="/delete/{{todo.sno}}" type="button" class="btn-button" >Delete</a>
+            
+            </td>
+            
+          </tr>
+          
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+</body>
+</html>
